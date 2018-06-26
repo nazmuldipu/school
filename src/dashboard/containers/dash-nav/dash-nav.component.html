@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <div class="company_logo">
+    <a routerLink="/">
+      <span class="company_logo-name">MON INFOTECH</span>
+    </a>
+    <a class="ml-2 border px-2 py-1 pull-right m-2" [routerLink] (click)="setSideNav()">
+      <span class="navbar-toggler-icon m-0"></span>
+    </a>
+
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    (click)="toggleCollapse()" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse show" id="navbarCollapse" [class.show]="show">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+
+    <ul class="navbar-nav border-right mr-3 pr-3">
+      <li class="nav-item">
+        <a class="nav-link nav-icon">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span class="badge badge-pill badge-primary">5</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-icon">
+          <i class="fa fa-bell-o " aria-hidden="true"></i>
+          <span class="badge badge-pill badge-warning">3</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav mr-2">
+
+      <li ngbDropdown placement="bottom-right" class="nav-item dropdown left-border">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name</a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" routerLink="/dashboard/profile">
+            <i class="fa fa-user"></i> Profile </a>
+          <a class="dropdown-item" routerLink="/dashboard/change-password">
+            <i class="fa fa-unlock-alt"></i> Password change </a>
+          <a class="dropdown-item" (click)="logout()">
+            <i class="fa fa-sign-out"></i> Sign out </a>
+        </div>
+      </li>
+      <ng-template #anonymousUser>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">লগইন</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

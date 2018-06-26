@@ -1,0 +1,63 @@
+@import '../../../assets/theme.scss';
+
+nav {
+  background-color: $primary-color-text;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-icon {
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: $primary-color-light;
+  border-radius: 50%;
+}
+
+.nav-icon > i {
+  padding: 0 3px;
+  font-size: 18px;
+}
+
+.badge.badge-pill {
+  font-size: 10px;
+  position: absolute;
+  top: 5px;
+}
+
+.company_logo {
+  width: 285px;
+  background: $accent-color;
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+  & a:hover {
+    color: $divider-color;
+  }
+  &-name {
+    padding-left: 10px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-item {
+    display: inline;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+  }
+  .nav-icon {
+    width: 40px;
+  }
+  .nav-icon > i {
+    padding: 0 10px;
+  }
+
+  .badge.badge-pill {
+    top: 1px;
+  }
+}

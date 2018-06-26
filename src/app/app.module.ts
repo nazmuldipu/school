@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // routes
 export const ROUTES: Routes = [
@@ -19,7 +20,7 @@ export const ROUTES: Routes = [
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
+  imports: [BrowserModule, RouterModule.forRoot(ROUTES), NgbModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })
