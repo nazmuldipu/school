@@ -10,6 +10,7 @@ import { SideNavComponent } from './containers/side-nav/side-nav.component';
 import { DashboardComponent } from './dashboard.component';
 import { ProfileComponent } from './containers/profile/profile.component';
 import { ChangePasswordComponent } from './containers/change-password/change-password.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 // routes
 export const ROUTES: Routes = [
@@ -49,7 +50,8 @@ export const ROUTES: Routes = [
     DashNavComponent,
     SideNavComponent,
     ProfileComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    CalendarComponent
   ]
 })
 export class DashboardModule {}
